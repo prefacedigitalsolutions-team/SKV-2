@@ -1,0 +1,285 @@
+/* Section */
+.pdf-download-section {
+  max-width: 1300px;
+  margin: 70px auto;
+  padding: 0 20px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Heading */
+.pdf-heading {
+  font-size: 40px;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: #001652;
+}
+
+/* Paragraph */
+.pdf-description {
+  font-size: 25px;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Grid */
+.pdf-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 45px;
+}
+
+/* Card */
+.pdf-card {
+  background: #eeeeee;
+  border-radius: 12px;
+  padding: 28px 24px 32px;
+  border: 1px solid #000000;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.pdf-card:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  transform: translateY(-6px);
+}
+
+/* PDF title */
+.pdf-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+/* Image */
+.pdf-image img {
+  width: 100%;
+  max-width: 370px;
+  height: auto;
+  margin-bottom: 22px;
+  border-radius: 6px;
+}
+
+/* Button */
+.pdf-download-btn {
+  display: inline-block;
+  padding: 11px 26px;
+  background-color: #003975;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.25s ease;
+}
+
+.pdf-download-btn:hover {
+  background-color: #004ea8;
+  color: aqua;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .pdf-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .pdf-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pdf-heading {
+    font-size: 24px;
+  }
+
+  .pdf-description {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/*contact page start form section */
+
+
+
+/* ================== SECTION BACKGROUND ================== */
+.enquiry-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #ffffff, #eef2f7);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ================== CONTAINER ================== */
+.enquiry-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+  align-items: stretch;
+}
+
+/* ================== COMMON CARD ================== */
+.enquiry-form,
+.enquiry-animation {
+  flex: 1;
+  padding: 45px;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ================== FORM SIDE ================== */
+.enquiry-form {
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+  border: 1px solid #e5eaf2;
+}
+
+.enquiry-form h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #1f2933;
+}
+
+/* Inputs */
+.enquiry-form input,
+.enquiry-form textarea {
+  width: 100%;
+  padding: 14px 15px;
+  margin-bottom: 18px;
+  border: 1px solid #d1d9e6;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.enquiry-form input::placeholder,
+.enquiry-form textarea::placeholder {
+  color: #8a94a6;
+}
+
+.enquiry-form input:focus,
+.enquiry-form textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  outline: none;
+}
+
+.enquiry-form textarea {
+  resize: none;
+}
+
+/* Button */
+.enquiry-form button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.enquiry-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+}
+
+/* ================== ANIMATION SIDE ================== */
+.enquiry-animation {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Glow Effect */
+.enquiry-animation::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(37,99,235,0.35), transparent 60%);
+  top: -120px;
+  right: -120px;
+  animation: glowMove 8s ease-in-out infinite;
+}
+
+/* Wave Animation */
+.enquiry-animation::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 40%,
+    rgba(255,255,255,0.08) 50%,
+    transparent 60%
+  );
+  top: 0;
+  left: -100%;
+  animation: waveMove 6s linear infinite;
+}
+
+.enquiry-animation h3 {
+  margin-top: 240px;
+  font-size: 22px;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+  line-height: 1.4;
+}
+
+/* ================== ANIMATIONS ================== */
+@keyframes glowMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-40px, 40px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes waveMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 992px) {
+  .enquiry-container {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .enquiry-container {
+    flex-direction: column;
+  }
+
+  .enquiry-animation h3 {
+    margin-top: 180px;
+  }
+}
