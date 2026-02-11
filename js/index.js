@@ -64,54 +64,76 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // mouse hover animatio start
 
-
-
-
-
 // nav bar section start
 
-const toggle = document.getElementById("toggle");
-const sidebar = document.getElementById("sidebar");
+document.addEventListener("DOMContentLoaded", function () {
 
-// Toggle sidebar on button click
-toggle.addEventListener("click", (e) => {
-  e.stopPropagation(); // Prevent click from bubbling
-  toggle.classList.toggle("active");
-  sidebar.classList.toggle("active");
-});
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.querySelector(".nav-menu");
 
-// Close sidebar when clicking outside
-document.addEventListener("click", (e) => {
-  if (sidebar.classList.contains("active") && !sidebar.contains(e.target) && e.target !== toggle) {
-    sidebar.classList.remove("active");
-    toggle.classList.remove("active");
-    closeAllDropdowns(); // close any open dropdown
+  /* ================= MOBILE MAIN MENU TOGGLE ================= */
+  if (menuToggle) {
+    menuToggle.addEventListener("click", function () {
+      navMenu.classList.toggle("active");
+    });
   }
-});
 
-// Prevent sidebar clicks from closing itself
-
-sidebar.addEventListener("click", (e) => {
-  e.stopPropagation();
-});
-
-// Dropdown toggle for all dropdowns (multiple safe)
-const dropdowns = document.querySelectorAll(".dropdown");
-
-dropdowns.forEach(drop => {
-  drop.addEventListener("click", (e) => {
-    e.stopPropagation();
-    drop.classList.toggle("active");
+  /* ================= PRODUCTS MAIN DROPDOWN (Mobile only) ================= */
+  document.querySelectorAll(".dropdown > a").forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      if (window.innerWidth <= 991) {
+        e.preventDefault();
+        this.parentElement.classList.toggle("active");
+      }
+    });
   });
+
+  /* ================= NESTED DROPDOWN (Desktop + Mobile) ================= */
+  document.querySelectorAll(".toggle-section h4").forEach(function (heading) {
+
+    heading.addEventListener("click", function (e) {
+
+      e.preventDefault();      // ✅ always prevent jump
+      e.stopPropagation();    // ✅ stop parent close
+
+      const parentSection = this.parentElement;
+
+      // Close other nested dropdowns
+      document.querySelectorAll(".toggle-section").forEach(function (section) {
+        if (section !== parentSection) {
+          section.classList.remove("active");
+        }
+      });
+
+      // Toggle current
+      parentSection.classList.toggle("active");
+
+    });
+
+  });
+
+  /* ================= CLOSE WHEN CLICK OUTSIDE ================= */
+  document.addEventListener("click", function (e) {
+
+    if (!e.target.closest(".nav-menu") && !e.target.closest(".menu-toggle")) {
+
+      navMenu.classList.remove("active");
+
+      document.querySelectorAll(".dropdown").forEach(function (drop) {
+        drop.classList.remove("active");
+      });
+
+      document.querySelectorAll(".toggle-section").forEach(function (section) {
+        section.classList.remove("active");
+      });
+
+    }
+
+  });
+
 });
 
-// Function to close all dropdowns
 
-function closeAllDropdowns() {
-  dropdowns.forEach(drop => drop.classList.remove("active"));
-}
-
-// nav bar section End
 
 
 

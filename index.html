@@ -40,46 +40,83 @@
 
 
 
+
  
-<!-- Nav bar start -->
+<!-- ================= NAV BAR START ================= -->
 
-<!-- GLASS TOGGLE -->
-<div class="glass-toggle" id="toggle"></div>
+<nav class="top-nav">
+  <div class="nav-inner">
 
-<!-- SIDEBAR -->
-<aside class="sidebar" id="sidebar">
+    <!-- LOGO -->
+    <div class="logo">
+      <a href="index.html">
+        <img src="img-1/brand-logo.png" alt="Brand Logo">
+      </a>
+    </div>
 
- <div class="sidebar-image">
-  <img src="img-1/carousel-1.jpg" alt="Sidebar Image" class="sidebar-img">
+    <!-- TOGGLE BUTTON (Mobile) -->
+<div class="menu-toggle" id="menuToggle">
+  ☰
 </div>
 
-  <div class="sidebar-glass"></div>
+    <!-- MENU -->
+    <ul class="nav-menu">
 
-  <ul class="menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="About.html">About</a></li>
-  
+      <li>
+        <a href="index.html">Home</a>
+      </li>
 
-    <li class="dropdown">
-      <a>Products ▾</a>
-      <div class="dropdown-menu">
-        <a href="fabiric-laminated.html">Fabric Laminated Glass</a>
-        <a href="Wire-Mesh.html">Wire Mesh Glass</a>
-        <a href="Reeded-Glass.html">Reeded Glass</a>
-        <a href="Tinted-Glass.html">Tinted Glass</a>
-        <a href="Marble-Glass.html">Marble Glass</a>
-        <a href="Lacquered-Glass.html">Lacquered Glass</a>
-          <a href="Vanity-Mirror.html">Vanity Mirror</a>
-        <a href="Hardware.html">Hardware</a>
-      
-      </div>
-    </li>
+      <li>
+        <a href="About.html">About</a>
+      </li>
 
-      <li><a href="Downloads.html">Downloads</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</aside>
+      <!-- PRODUCTS DROPDOWN -->
+      <li class="dropdown">
+        <a href="javascript:void(0);">Products ▾</a>
 
+        <div class="mega-menu">
+
+          <!-- Product 1 Section -->
+          <div class="mega-section">
+            
+            <a href="fabiric-laminated.html">Fabric Laminated Glass</a>
+            <a href="Wire-Mesh.html">Wire Mesh Glass</a>
+            <a href="Reeded-Glass.html">Reeded Glass</a>
+            <a href="Tinted-Glass.html">Tinted Glass</a>
+            <a href="Tinted-Glass.html">Mirror Glass</a>
+            <a href="Tinted-Glass.html">Hardware</a>
+          </div>
+
+          <!-- Decorative Glass (Click to Open Nested) -->
+          <div class="mega-section toggle-section">
+            <h4 class="toggle-title">Decorative Glass</h4>
+
+            <div class="toggle-content">
+              <a href="Marble-Glass.html">Marble Glass</a>
+              <a href="Lacquered-Glass.html">Lacquered Glass</a>
+              <a href="Vanity-Mirror.html">Vanity Mirror</a>
+              <a href="Hardware.html">Hardware</a>
+              <a href="#">Product 5</a>
+              <a href="#">Product 6</a>
+              <a href="#">Product 7</a>
+            </div>
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <a href="Downloads.html">Downloads</a>
+      </li>
+
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>
 
 <!-- Nav bar End -->
 
@@ -89,10 +126,6 @@
 <!-- BANNER section start -->
 
 <section class="door-banner">
-  <!-- Logo -->
-  <div class="slider-logo">
-    <img src="img-1/brand-logo.png" alt="Logo">
-  </div>
 
   <div class="slides">
 
@@ -238,14 +271,16 @@
 <!-- static image section End-->
 
 
+
+
 <!-- product section start-->
 
 <section class="featured-section">
   <div class="image-row">
     <!-- Large Box -->
   <div class="large-box">
-  <a class="main-link" href="fabiric-laminated.html">
-    <img id="main-image" src="img-1/FabricLaminatedGlass.jpg" alt="Featured Product">
+  <a class="main-link" href="#">
+    <img id="main-image" src="img-1/Sliding-Door-1.jpg" alt="Featured Product">
   </a>
 </div>
 
@@ -261,88 +296,153 @@
   <div class="small-slider-inner">
 
     <div class="small-box" data-index="0">
-      <a href="fabiric-laminated.html" class="product-link">
-        <img src="img-1/FabricLaminatedGlass.jpg" alt="Fabric Laminated Glass">
-        <span class="small-name">Fabric Laminated Glass</span>
+      <a href="#" class="product-link">
+        <img src="img-1/Sliding-Door-1.jpg" alt="Fabric Laminated Glass">
+        <span class="small-name">Sliding Door</span>
       </a>
     </div>
 
-    <div class="small-box" data-index="1">
-      <a href="wire-mesh-glass.html" class="product-link">
-        <img src="img-1/WireMeshGlass.jpg" alt="Wire Mesh Glass">
-        <span class="small-name">Wire Mesh Glass</span>
+      <div class="small-box" data-index="1">
+      <a href="Vanity-Mirror.html" class="product-link">
+        <img src="img-1/Vanity-mirror-2.jpg" alt="Wire Mesh Glass">
+        <span class="small-name">Venity Mirror</span>
       </a>
     </div>
 
     <div class="small-box" data-index="2">
-      <a href="reeded-glass.html" class="product-link">
-        <img src="img-1/ReededGlass.jpg" alt="Reeded Glass">
-        <span class="small-name">Reeded Glass</span>
+      <a href="Hardware.html" class="product-link">
+        <img src="img-1/Hardware-img-1.jpg" alt="Wire Mesh Glass">
+        <span class="small-name">Hardware</span>
       </a>
     </div>
 
-    <div class="small-box" data-index="3">
-      <a href="tinted-clear-glass.html" class="product-link">
-        <img src="img-1/TintedGlass.jpg" alt="Tinted Glass">
-        <span class="small-name">Tinted & Clear Glass</span>
-      </a>
-    </div>
 
-    <div class="small-box" data-index="4">
-      <a href="marble-glass.html" class="product-link">
-        <img src="img-1/MarbleGlass.jpg" alt="Marble Glass">
-        <span class="small-name">Marble Glass</span>
-      </a>
-    </div>
-
-    <div class="small-box" data-index="5">
-      <a href="lacquered-glass.html" class="product-link">
-        <img src="img-1/LacqueredGlass.jpg" alt="Lacquered Glass">
+     <div class="small-box" data-index="3">
+      <a href="Hardware.html" class="product-link">
+        <img src="img-1/LacqueredGlass.jpg" alt="Wire Mesh Glass">
         <span class="small-name">Lacquered Glass</span>
       </a>
     </div>
+
+    
+    <div class="small-box" data-index="4">
+      <a href="Hardware.html" class="product-link">
+        <img src="img-1/FabricLaminatedGlass.jpg" alt="Wire Mesh Glass">
+        <span class="small-name">Fabric Glass</span>
+      </a>
+    </div>
+
+
+    <div class="small-box" data-index="5">
+      <a href="Hardware.html" class="product-link">
+        <img src="img-1/Vanity-mirror-1.jpg" alt="Wire Mesh Glass">
+        <span class="small-name">Vanity Mirror</span>
+      </a>
+    </div>
+
+    <div class="small-box" data-index="6">
+      <a href="Hardware.html" class="product-link">
+        <img src="img-1/ReededGlass.jpg" alt="Wire Mesh Glass">
+        <span class="small-name">Reeded-Glass</span>
+      </a>
+    </div>
+
+     <div class="small-box" data-index="7">
+      <a href="Hardware.html" class="product-link">
+        <img src="img-1/sliding-3.jpg" alt="Wire Mesh Glass">
+        <span class="small-name">Sliding</span>
+      </a>
+    </div>
+
+    <div class="small-box" data-index="8">
+      <a href="Marble-Glass.html" class="product-link">
+        <img src="img-1/MarbleGlass.jpg" alt="Wire Mesh Glass">
+        <span class="small-name">Marble</span>
+      </a>
+    </div>
+
+    <div class="small-box" data-index="9">
+      <a href="#" class="product-link">
+        <img src="img-1/Sliding-Door-2.jpg" alt="Wire Mesh Glass">
+        <span class="small-name">Sliding Door</span>
+      </a>
+    </div>
+
+
 
     <!-- DUPLICATE FOR INFINITE SCROLL -->
-   
-        <div class="small-box" data-index="0">
-      <a href="fabiric-laminated.html" class="product-link">
-        <img src="img-1/FabricLaminatedGlass.jpg" alt="Fabric Laminated Glass">
-        <span class="small-name">Fabric Laminated Glass</span>
+
+
+     <div class="small-box" data-index="0">
+      <a href="#" class="product-link">
+        <img src="img-1/Sliding-Door-1.jpg" alt="Fabric Laminated Glass">
+        <span class="small-name">Sliding Door</span>
       </a>
     </div>
 
-    <div class="small-box" data-index="1">
-      <a href="wire-mesh-glass.html" class="product-link">
-        <img src="img-1/WireMeshGlass.jpg" alt="Wire Mesh Glass">
-        <span class="small-name">Wire Mesh Glass</span>
+      <div class="small-box" data-index="1">
+      <a href="Vanity-Mirror.html" class="product-link">
+        <img src="img-1/Vanity-mirror-2.jpg" alt="Wire Mesh Glass">
+        <span class="small-name">Venity Mirror</span>
       </a>
     </div>
 
     <div class="small-box" data-index="2">
-      <a href="reeded-glass.html" class="product-link">
-        <img src="img-1/ReededGlass.jpg" alt="Reeded Glass">
-        <span class="small-name">Reeded Glass</span>
+      <a href="Hardware.html" class="product-link">
+        <img src="img-1/Hardware-img-1.jpg" alt="Wire Mesh Glass">
+        <span class="small-name">Hardware</span>
       </a>
     </div>
 
+    
     <div class="small-box" data-index="3">
-      <a href="tinted-clear-glass.html" class="product-link">
-        <img src="img-1/TintedGlass.jpg" alt="Tinted Glass">
-        <span class="small-name">Tinted & Clear Glass</span>
-      </a>
-    </div>
-
-    <div class="small-box" data-index="4">
-      <a href="marble-glass.html" class="product-link">
-        <img src="img-1/MarbleGlass.jpg" alt="Marble Glass">
-        <span class="small-name">Marble Glass</span>
-      </a>
-    </div>
-
-    <div class="small-box" data-index="5">
-      <a href="lacquered-glass.html" class="product-link">
-        <img src="img-1/LacqueredGlass.jpg" alt="Lacquered Glass">
+      <a href="Hardware.html" class="product-link">
+        <img src="img-1/LacqueredGlass.jpg" alt="Wire Mesh Glass">
         <span class="small-name">Lacquered Glass</span>
+      </a>
+    </div>
+
+    
+    <div class="small-box" data-index="4">
+      <a href="Hardware.html" class="product-link">
+        <img src="img-1/FabricLaminatedGlass.jpg" alt="Wire Mesh Glass">
+        <span class="small-name">Fabric Glass</span>
+      </a>
+    </div>
+
+
+     <div class="small-box" data-index="5">
+      <a href="Hardware.html" class="product-link">
+        <img src="img-1/Vanity-mirror-1.jpg" alt="Wire Mesh Glass">
+        <span class="small-name">Vanity Mirror</span>
+      </a>
+    </div>
+
+    <div class="small-box" data-index="6">
+      <a href="Hardware.html" class="product-link">
+        <img src="img-1/ReededGlass.jpg" alt="Wire Mesh Glass">
+        <span class="small-name">Reeded-Glass</span>
+      </a>
+    </div>
+
+    <div class="small-box" data-index="7">
+      <a href="Hardware.html" class="product-link">
+        <img src="img-1/sliding-3.jpg" alt="Wire Mesh Glass">
+        <span class="small-name">Sliding</span>
+      </a>
+    </div>
+
+    <div class="small-box" data-index="8">
+      <a href="Marble-Glass.html" class="product-link">
+        <img src="img-1/MarbleGlass.jpg" alt="Wire Mesh Glass">
+        <span class="small-name">Marble</span>
+      </a>
+    </div>
+
+    <div class="small-box" data-index="9">
+      <a href="#" class="product-link">
+        <img src="img-1/Sliding-Door-2.jpg" alt="Wire Mesh Glass">
+        <span class="small-name">Sliding Door</span>
       </a>
     </div>
 

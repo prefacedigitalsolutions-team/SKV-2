@@ -42,47 +42,83 @@
 
 
  
-<!-- Nav bar start -->
+<!-- ================= NAV BAR START ================= -->
 
-<!-- GLASS TOGGLE -->
-<div class="glass-toggle" id="toggle"></div>
+<nav class="top-nav">
+  <div class="nav-inner">
 
-<!-- SIDEBAR -->
-<aside class="sidebar" id="sidebar">
+    <!-- LOGO -->
+    <div class="logo">
+      <a href="index.html">
+        <img src="img-1/brand-logo.png" alt="Brand Logo">
+      </a>
+    </div>
 
- <div class="sidebar-image">
-  <img src="img-1/carousel-1.jpg" alt="Sidebar Image" class="sidebar-img">
+    <!-- TOGGLE BUTTON (Mobile) -->
+<div class="menu-toggle" id="menuToggle">
+  ☰
 </div>
 
-  <div class="sidebar-glass"></div>
+    <!-- MENU -->
+    <ul class="nav-menu">
 
-  <ul class="menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="About.html">About</a></li>
-   
+      <li>
+        <a href="index.html">Home</a>
+      </li>
 
-    <li class="dropdown">
-      <a>Products ▾</a>
-      <div class="dropdown-menu">
-        <a href="fabiric-laminated.html">Fabric Laminated Glass</a>
-        <a href="Wire-Mesh.html">Wire Mesh Glass</a>
-        <a href="Reeded-Glass.html">Reeded Glass</a>
-        <a href="Tinted-Glass.html">Tinted Glass</a>
-        <a href="Marble-Glass.html">Marble Glass</a>
-        <a href="Lacquered-Glass.html">Lacquered Glass</a>
-          <a href="Vanity-Mirror.html">Vanity Mirror</a>
-        <a href="Hardware.html">Hardware</a>
-      
-      </div>
-    </li>
+      <li>
+        <a href="About.html">About</a>
+      </li>
 
-     <li><a href="Downloads.html">Downloads</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</aside>
+      <!-- PRODUCTS DROPDOWN -->
+      <li class="dropdown">
+        <a href="javascript:void(0);">Products ▾</a>
 
+        <div class="mega-menu">
+
+          <!-- Product 1 Section -->
+          <div class="mega-section">
+            
+            <a href="fabiric-laminated.html">Fabric Laminated Glass</a>
+            <a href="Wire-Mesh.html">Wire Mesh Glass</a>
+            <a href="Reeded-Glass.html">Reeded Glass</a>
+            <a href="Tinted-Glass.html">Tinted Glass</a>
+            <a href="Marble-Glass.html">Marble Glass</a>
+            <a href="Lacquered-Glass.html">Lacquered Glass</a>
+          </div>
+
+          <!-- Decorative Glass (Click to Open Nested) -->
+          <div class="mega-section toggle-section">
+            <h4 class="toggle-title">Decorative Glass</h4>
+
+            <div class="toggle-content">
+             <a href="Vanity-Mirror.html">Vanity Mirror</a>
+              <a href="Hardware.html">Hardware</a>
+              <a href="Hardware.html">Hardware</a>
+              <a href="#">Product 5</a>
+              <a href="#">Product 6</a>
+              <a href="#">Product 7</a>
+            </div>
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <a href="Downloads.html">Downloads</a>
+      </li>
+
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>
 
 <!-- Nav bar End -->
+
 
 
 
@@ -96,11 +132,6 @@ data-images="
   img-1/Vanity-mirror/Vanity-mirror-banar-1.jpg,
   img-1/Vanity-mirror/Vanity-mirror-banar-3.jpg
 ">
-
-
-  <div class="brand-logo">
-    <img src="img-1/brand-logo.png" alt="Glass Studio Logo">
-  </div>
 
   <div class="curtain">
     <span class="shine"></span>
