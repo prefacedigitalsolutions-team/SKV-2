@@ -347,6 +347,13 @@ body{
   color: #000;
 }
 
+/* Active Nav Link */
+.nav-menu a.active{
+  color: #ff8902;   /* halka red */
+  font-weight: 600;
+}
+
+
 /* ================= MOBILE & TABLET (≤991px) ================= */
 
 @media (max-width:991px){
