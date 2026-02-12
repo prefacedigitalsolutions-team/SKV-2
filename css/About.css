@@ -22,9 +22,9 @@
     inset: 0;
     background: linear-gradient(
         120deg,
-        rgba(5,7,13,0.80),
+        rgba(5,7,13,0.70),
         rgba(5,7,13,0.67),
-        rgba(5,7,13,0.85)
+        rgba(5,7,13,0.75)
     );
     z-index: 1;
 }
@@ -199,165 +199,172 @@
     }
 }
 
+/* About banner section page end */
 
 
- /* About  banaar section page end*/
+/* ===============================
+   Intro / About Section Start
+================================ */
 
-
-
-
- /* About compani section start */
-
-.about-clean-sec {
-    background: #ffffff;
-    padding: 100px 0;
-    overflow: hidden;
+.about-new-sec {
+  padding: 100px 0;
+  background: #ebf1f1;
 }
 
-/* */
-
-.about-clean-wrap {
-    max-width: 1350px;                 
-    margin: auto;
-    padding: 0 6%;                     
-    display: grid;
-    grid-template-columns: 1.35fr 0.65fr; 
-    align-items: center;
-    gap: 30px;
+.about-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/*  TEXT ================= */
+/* ===============================
+   Row Layout
+================================ */
 
-.about-clean-text {
-    opacity: 0;
-    transform: translateY(50px);
+.about-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  margin-top: 20px;
 }
 
-.about-clean-tag {
-    font-size: 0.85rem;
-    letter-spacing: 4px;
-    color: #0a6cff;
-    display: inline-block;
-    margin-bottom: 18px;
+/* ===============================
+   Text Content
+================================ */
+
+.about-text {
+  flex: 1;
 }
 
-.about-clean-title {
-    font-size: 3rem;
-    line-height: 1.2;
-    color: #111;
-    margin-bottom: 26px;
+.about-text h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color:#003A66;
 }
 
-.about-clean-text p {
-    font-size: 1.05rem;
-    line-height: 1.85;
-    color: #444;
-    margin-bottom: 20px;
-    max-width: 700px;     
+.about-subtitle {
+  display: block;
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  color: #0d1631;
+  text-transform: uppercase;
+}
+
+.about-text p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  position: relative;
+  padding-left: 18px;
+}
+
+.about-text p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 4px;
+  height: 100%;
+  background:  #003A66;
+}
+/* ===============================
+   Image Styling
+================================ */
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+}
+
+/* Second about-row ko thoda niche lao */
+.about-row + .about-row {
+  margin-top: 100px;
 }
 
 
-/*  IMAGE=  */
 
-.about-clean-image {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    aspect-ratio: 6 / 10;      
-    max-width: 185%;           
+.animate-left,
+.animate-right {
+  opacity: 0;
+  transition: all 0.8s ease;
 }
 
-
-.about-clean-image::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(255,255,255,0.15),
-        rgba(255,255,255,0)
-    );
-    pointer-events: none;
+.animate-left {
+  transform: translateX(-80px);
 }
 
-.about-clean-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: scale(1.08);     /* subtle premium zoom */
-    opacity: 0;
+.animate-right {
+  transform: translateX(180px);
 }
 
-/* ================= ANIMATION ================= */
-
-.about-clean-sec.active .about-clean-text {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 1s ease, transform 1s ease;
+.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-.about-clean-sec.active .about-clean-image img {
-    opacity: 1;
-    transform: scale(1);
-    transition: opacity 1.6s ease, transform 1.6s ease;
-}
+/* ===============================
+   Responsive Design
+================================ */
 
-/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .about-image img {
+    height: 360px;
+  }
+}
 
 @media (max-width: 768px) {
 
-    .about-clean-sec {
-        padding: 60px 0;
-    }
+  .about-new-sec {
+    padding: 70px 0;
+  }
 
-    .about-clean-wrap {
-        grid-template-columns: 1fr;
-        gap: 50px;
-        padding: 0 6%;
-    }
+  .about-row {
+    flex-direction: column;
+    gap: 30px;
+  }
 
-    .about-clean-text {
-        text-align: center;
-    }
+  .about-image img {
+    height: 280px;
+  }
 
-    .about-clean-title {
-        font-size: 2rem;
-    }
+  .about-image-down {
+    margin-top: 0;
+  }
 
-    .about-clean-text p {
-        max-width: 100%;
-        font-size: 0.95rem;
-        line-height: 1.7;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .about-clean-image {
-        max-width: 100%;
-        aspect-ratio: 16 / 9;
-        margin: auto;
-    }
+  .about-text {
+    text-align: left;
+  }
 }
-
-
 
 @media (max-width: 480px) {
 
-    .about-clean-title {
-        font-size: 1.7rem;
-    }
+  .about-text h3 {
+    font-size: 22px;
+  }
 
-    .about-clean-text p {
-        font-size: 0.9rem;
-    }
-
-    .about-clean-image {
-        aspect-ratio: 5 / 7;
-        border-radius: 6px;
-    }
+  .about-text p {
+    font-size: 15px;
+  }
 }
 
-/* About compani + paragraph section End */
+@media (max-width: 768px) {
+  .about-row + .about-row {
+    margin-top: 40px;
+  }
+}
 
 
 
@@ -372,18 +379,12 @@
     text-align: center;
 }
 
-.grid-tag {
-    font-size: 0.85rem;
-    letter-spacing: 4px;
-    color: #0a6cff;
-    display: inline-block;
-    margin-bottom: 14px;
-}
+
 
 .grid-title {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     line-height: 1.2;
-    color: #111;
+    color: #003A66;
     margin-bottom: 18px;
 }
 
@@ -415,7 +416,7 @@
 .img-box {
     position: relative;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 2px;
     height: 360px; /* BIG IMAGES */
     cursor: pointer;
 }
