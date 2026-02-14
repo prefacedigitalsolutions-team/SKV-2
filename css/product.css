@@ -81,9 +81,9 @@
 
   background: linear-gradient(
     120deg,
-    rgba(140, 186, 218, 0.75),
-    rgba(0, 0, 0, 0.55),
-    rgba(2, 24, 34, 0.75)
+    rgba(140, 186, 218, 0.65),
+    rgba(0, 0, 0, 0.25),
+    rgba(2, 24, 34, 0.35)
   );
   z-index: 2;
 }

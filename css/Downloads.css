@@ -148,7 +148,7 @@
 /* IMAGE SIDE */
 .download-info-image {
   flex: 1;
-  max-height: 400px;   /* image height control */
+  max-height: 620px;   /* image height control */
   overflow: hidden;
 }
 

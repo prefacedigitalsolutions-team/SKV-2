@@ -517,7 +517,7 @@ body{
 /* banar section start*/
 
 .door-banner{
-  margin-top: 12vh;
+  margin-top: 10vh;
   width:100%;
   height:90vh;
   position:relative;
@@ -552,7 +552,7 @@ body{
   width:50%;
   height:100%;
   top:0;
-  background:rgba(114, 114, 114, 0.5);
+  background:rgba(189, 138, 72, 0.5);
   overflow:hidden;
   transition:transform 1.6s ease-in-out;
 }
@@ -706,365 +706,78 @@ body{
 
 
 
-
-
-
-
-
-/* About section start */
-
-.cube-text-section{
-  width:100%;
-  min-height:90vh;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:140px;
-  padding:130px;
-  box-sizing:border-box;
+.about-us-section {
+  padding: 60px 0;
+  background: #f9f9f9;
 }
 
-/* =========================
-   LEFT CUBE AREA
-   ========================= */
-.cube-area{
-  flex:1;
-  display:flex;
-  justify-content:center;
-}
-
-.cube-slider{
-  width:380px;    
-  height:480px;    
-  perspective:1200px;
-}
-
-.cube-box{
-  width:100%;
-  height:100%;
-  position:relative;
-  transform-style:preserve-3d;
-  transition:transform 1s ease-in-out;
-}
-
-/* Cube faces */
-.cube-face{
-  position:absolute;
-  width:100%;
-  height:100%;
-
-  background-size:cover;
-  background-position:center;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  padding:18px;
-  text-align:center;
-  box-sizing:border-box;
-}
-
-/* adjusted depth */
-.cube-front{ transform:rotateY(0deg) translateZ(190px); }
-.cube-right{ transform:rotateY(90deg) translateZ(190px); }
-.cube-back { transform:rotateY(180deg) translateZ(190px); }
-.cube-left { transform:rotateY(-90deg) translateZ(190px); }
-
-/* Face colors */
-.cube-dark{
-  background:linear-gradient(135deg,#003A66,#0b4f64);
-  color:white;
-}
-
-.cube-light{
-  background:linear-gradient(135deg,#707070,#2b2b2b);
-  color:#ffffff;
-
-}
-
-.cube-face h3{
-  font-size:40px;
-  margin-bottom:12px;
-  font-weight:600;
-  letter-spacing:0.8px;
-  text-transform:capitalize;
-   font-style: italic;
-  /* soft glow / premium look */
-  text-shadow:
-    0 2px 6px rgba(0,0,0,0.25),
-    0 0 10px rgba(255,255,255,0.15);
-}
-
-.cube-face p{
-  font-size:19px;
-  line-height:1.5;
-  font-weight:400;
-  letter-spacing:0.6px;
-  font-style: italic;
-  opacity:0.95;
-
-  text-shadow:
-    0 1px 4px rgba(0,0,0,0.25);
-}
-
-/* =========================
-   RIGHT TEXT AREA
-   ========================= */
-.text-area{
-  flex:1;
-  max-width:990px;
-}
-
-.text-area h2{
-  font-size:40px;
-  margin-bottom:10px;
-  color:#003A66;
-
-}
-
-.text-area p{
-  font-size:17px;
-  line-height:1.6;
-  letter-spacing: 1px;
-  color:#555;
-}
-
-
-.cube-box{
-  transform-style:preserve-3d;
-  transition:transform 1s ease-in-out;
-}
-
-
-.explore-btn {
-  display: inline-flex;
+.about-us-wrapper {
+  display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* makes it responsive */
+}
 
-  margin-top: 30px;
-  padding: 14px 32px;
+.about-image {
+  flex: 1 1 45%;
+}
 
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0.3px;
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
 
+.about-content {
+  flex: 1 1 50%;
+}
+
+.about-content h2 {
+  font-size: 32px;
   color: #111;
-  text-decoration: none;
-
-  border-radius: 999px;
-  border: 1px solid rgba(0,0,0,0.18);
-  background: transparent;
-
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    box-shadow 0.3s ease,
-    transform 0.2s ease;
+  margin-bottom: 20px;
 }
 
-/* Hover effect */
-.explore-btn:hover {
-  background: #003A66;
-  color: #ffffff;
-  transform: translateY(-2px);
-}
-
-/* Optional arrow */
-.explore-btn::after {
-  content: "→";
+.about-content p {
   font-size: 16px;
-  transition: transform 0.3s ease;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
 }
 
-.explore-btn:hover::after {
-  transform: translateX(4px);
+.about-content .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #464444;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: 0.3s;
 }
 
-
-/* =========================
-   LOAD ANIMATION
-   ========================= */
-
-.cube-text-section{
-  opacity: 0;
-  transform: translateY(40px) scale(0.98);
-  animation: sectionReveal 1.2s ease forwards;
+.about-content .btn:hover {
+  background-color: rgb(5, 50, 80);
 }
 
-@keyframes sectionReveal{
-  to{
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-/* cube comes slightly later */
-.cube-area{
-  opacity: 0;
-  transform: translateX(-10px);
-  animation: cubeReveal 1.2s ease forwards;
-  animation-delay: 0.3s;
-}
-
-@keyframes cubeReveal{
-  to{
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* text area staggered */
-.text-area{
-  opacity: 0;
-  transform: translateX(40px);
-  animation: textReveal 1.2s ease forwards;
-  animation-delay: 0.45s;
-}
-
-@keyframes textReveal{
-  to{
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-
-
-/*  Small phones */
-@media (max-width: 480px) {
-  .cube-text-section {
+/* Responsive */
+@media (max-width: 991px) {
+  .about-us-wrapper {
     flex-direction: column;
-    min-height: auto;
-    gap: 40px;
-    padding: 80px 16px;
-    margin-top: 10vh;
-  }
-
-  .cube-slider {
-    width: 240px;
-    height: 300px;
-  }
-
-  .cube-front,
-  .cube-right,
-  .cube-back,
-  .cube-left {
-    transform: rotateY(var(--r, 0deg)) translateZ(120px);
-  }
-
-  .cube-face h3 {
-    font-size: 24px;
-  }
-
-  .cube-face p {
-    font-size: 14px;
-    line-height: 1.45;
-  }
-
-  .text-area {
-    max-width: 100%;
     text-align: center;
   }
 
-  .text-area h2 {
-    font-size: 26px;
+  .about-image, .about-content {
+    flex: 1 1 100%;
   }
 
-  .text-area p {
-    font-size: 15px;
-    line-height: 1.5;
-    letter-spacing: 0.4px;
-  }
-
-  .explore-btn {
-    padding: 12px 26px;
-    font-size: 14px;
+  .about-content .btn {
+    margin-top: 15px;
   }
 }
 
-/*  Large phones / tablets */
-@media (max-width: 768px) {
-  .cube-text-section {
-    flex-direction: column;
-    min-height: auto;
-    gap: 50px;
-    padding: 60px 24px;
-  }
-
-  .cube-slider {
-    width: 300px;
-    height: 380px;
-  }
-
-  .cube-front { transform: rotateY(0deg) translateZ(150px); }
-  .cube-right { transform: rotateY(90deg) translateZ(150px); }
-  .cube-back  { transform: rotateY(180deg) translateZ(150px); }
-  .cube-left  { transform: rotateY(-90deg) translateZ(150px); }
-
-  .cube-face h3 {
-    font-size: 30px;
-  }
-
-  .cube-face p {
-    font-size: 16px;
-  }
-
-  .text-area {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .text-area h2 {
-    font-size: 32px;
-  }
-
-  .text-area p {
-    font-size: 17px;
-    line-height: 1.55;
-  }
-}
-
-/*  Large screens */
-@media (min-width: 1440px) {
-  .cube-text-section {
-    padding: 100px 140px;
-    gap: 80px;
-  }
-
-  .cube-slider {
-    width: 420px;
-    height: 520px;
-  }
-
-  .cube-front { transform: rotateY(0deg) translateZ(210px); }
-  .cube-right { transform: rotateY(90deg) translateZ(210px); }
-  .cube-back  { transform: rotateY(180deg) translateZ(210px); }
-  .cube-left  { transform: rotateY(-90deg) translateZ(210px); }
-
-  .cube-face h3 {
-    font-size: 44px;
-  }
-
-  .cube-face p {
-    font-size: 21px;
-    line-height: 1.6;
-  }
-
-  .text-area h2 {
-    font-size: 46px;
-  }
-
-  .text-area p {
-    font-size: 22px;
-    line-height: 1.7;
-  }
-}
-
-/* About section End */
-
-
-
-
+/*** aBOUT SECTION eND ***/
 
 
 
@@ -1072,9 +785,9 @@ body{
 
 .impact-stats {
   position: relative;
-  padding: 150px 2px;
+  padding: 120px 2%; /* reduced padding for overall width */
 
-  background-image: url("../img-1/home/Home-Banar-2.jpg");
+  background-image: url("../img-1/home/Banar-1f.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1089,34 +802,30 @@ body{
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(15,23,42,0.55),
-    rgba(15,23,42,0.45),
-    rgba(15,23,42,0.60)
+    rgba(87, 87, 87, 0.45),
+    rgba(109, 109, 109, 0.35),
+    rgba(82, 82, 82, 0.25)
   );
   z-index: 0;
 }
 
-/* =========================
-   GRID – CENTERED
-========================= */
+/* GRID – CENTERED */
 .impact-grid {
-  max-width: 1320px;
+  max-width: 900px; /* reduced max width */
   margin: auto;
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 36px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px; /* slightly smaller gap */
 
   position: relative;
   z-index: 2;
 }
 
-/* =========================
-   CARD – UBHRA HUA GLASS
-========================= */
+/* CARD – UBHRA HUA GLASS */
 .impact-item {
   position: relative;
-  padding: 64px 48px;
+  padding: 48px 32px; /* reduced padding */
 
   background: linear-gradient(
     180deg,
@@ -1124,7 +833,7 @@ body{
     rgba(255,255,255,0.06)
   );
 
-  border-radius: 22px;
+  border-radius: 18px; /* slightly smaller corners */
   border: 1px solid rgba(255,255,255,0.28);
 
   backdrop-filter: blur(10px);
@@ -1134,10 +843,9 @@ body{
   flex-direction: column;
   justify-content: center;
 
-  /* 🔥 Ubhra hua look */
   box-shadow:
-    0 18px 40px rgba(0,0,0,0.55),
-    0 35px 90px rgba(0,0,0,0.35),
+    0 15px 35px rgba(0,0,0,0.55),
+    0 25px 60px rgba(0,0,0,0.35),
     inset 0 2px 3px rgba(255,255,255,0.45),
     inset 0 -5px 10px rgba(0,0,0,0.25);
 
@@ -1146,16 +854,14 @@ body{
     box-shadow 0.45s ease;
 }
 
-/* =========================
-   BASE SHADOW (FLOAT FEEL)
-========================= */
+/* BASE SHADOW */
 .impact-item::after {
   content: "";
   position: absolute;
-  left: 10%;
-  right: 10%;
-  bottom: -26px;
-  height: 32px;
+  left: 15%;
+  right: 15%;
+  bottom: -22px;
+  height: 28px;
 
   background: radial-gradient(
     ellipse at center,
@@ -1163,27 +869,23 @@ body{
     transparent 70%
   );
 
-  filter: blur(14px);
+  filter: blur(12px);
   z-index: -1;
 }
 
-/* =========================
-   HOVER – LITTLE LIFT (NOT UP MOVE)
-========================= */
+/* HOVER – LITTLE LIFT */
 .impact-item:hover {
-  transform: scale(1.06);
+  transform: scale(1.04);
   box-shadow:
-    0 30px 70px rgba(0,0,0,0.75),
-    0 0 60px rgba(56,189,248,0.22);
+    0 25px 55px rgba(0,0,0,0.65),
+    0 0 50px rgba(56,189,248,0.22);
 }
 
-/* =========================
-   VALUE
-========================= */
+/* VALUE */
 .impact-value {
-  font-size: clamp(46px, 5vw, 68px);
+  font-size: clamp(36px, 4vw, 60px); /* slightly smaller */
   font-weight: 700;
-  color: #ffffff;
+  color: #bb1c1c;
   letter-spacing: 1px;
 }
 
@@ -1191,120 +893,77 @@ body{
 .impact-value::after {
   content: "";
   display: block;
-  width: 90px;
+  width: 70px; /* smaller underline */
   height: 3px;
   margin-top: 14px;
   background: linear-gradient(90deg, #38bdf8, #d14a46);
   border-radius: 2px;
 }
 
-/* =========================
-   LABEL
-========================= */
+/* LABEL */
 .impact-label {
-  margin-top: 22px;
-  font-size: 15px;
-  letter-spacing: 1.6px;
+  margin-top: 18px; /* slightly smaller spacing */
+  font-size: 14px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
   color: #ffffff;
 }
 
-/* =========================
-   LARGE SCREENS (1600px+)
-========================= */
-@media (min-width: 1600px) {
-  .impact-stats {
-    padding: 180px 40px;
-  }
+/* RESPONSIVE ADJUSTMENTS */
 
-  .impact-grid {
-    max-width: 1500px;
-    gap: 44px;
-  }
-
-  .impact-item {
-    padding: 72px 56px;
-  }
-}
-
-/* =========================
-   LAPTOP / TABLET LANDSCAPE
-========================= */
+/* Large screens (1200px+) */
 @media (max-width: 1200px) {
-  .impact-stats {
-    padding: 140px 24px;
-  }
-
-  .impact-grid {
-    gap: 32px;
-  }
-
-  .impact-item {
-    padding: 56px 40px;
-  }
-}
-
-/* =========================
-   TABLET
-========================= */
-@media (max-width: 992px) {
   .impact-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
+    gap: 24px;
   }
 
   .impact-item {
-    padding: 52px 36px;
-  }
-
-  .impact-value {
-    font-size: 52px;
+    padding: 42px 28px;
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
-@media (max-width: 600px) {
-  .impact-stats {
-    padding: 110px 20px;
-    margin-top: 7vh;
-  }
-
+/* Tablet */
+@media (max-width: 992px) {
   .impact-grid {
     grid-template-columns: 1fr;
-    gap: 26px;
+    gap: 22px;
   }
 
   .impact-item {
-    padding: 44px 26px;
-    border-radius: 18px;
-
-    text-align: center;       
-    align-items: center;       
-  }
-
-  .impact-item::after {
-    left: 20%;
-    right: 20%;              
-  }
-
-  .impact-item:hover {
-    transform: scale(1.03);
+    padding: 36px 24px;
   }
 
   .impact-value {
-    font-size: 44px;
+    font-size: 48px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .impact-stats {
+    padding: 90px 16px;
+  }
+
+  .impact-item {
+    padding: 32px 20px;
+    border-radius: 16px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .impact-value {
+    font-size: 40px;
     text-align: center;
   }
 
   .impact-value::after {
     margin-left: auto;
-    margin-right: auto;       
+    margin-right: auto;
   }
 
   .impact-label {
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 1.2px;
     text-align: center;
   }
@@ -1398,15 +1057,15 @@ transform: translate(-50px, -20px);
 
 .feature-header h2 {
   margin-bottom: 25px;
-  font-size: 40px;
+  font-size: 35px;
     color: rgb(226, 225, 225);
 }
 
 .feature-header p {
-  margin-bottom: 50px;
-  font-size: 18px;
+  margin-bottom: 40px;
+  font-size: 17px;
     color: rgb(226, 225, 225);
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 /* Small Slider */
@@ -1846,9 +1505,9 @@ transform: translate(-50px, -20px);
 
 .services-header h2 {
 
-  font-size: 42px;
+  font-size: 25px;
   font-weight: 700;
-  color: #003A66;
+  color: #2c2c2c;
   margin-bottom: 18px;
 }
 
@@ -1857,7 +1516,7 @@ transform: translate(-50px, -20px);
   margin: 0 auto;         
   text-align: center;      
 
-  font-size: 19px;        
+  font-size: 17px;        
   line-height: 1.75;
   letter-spacing: 1px;   
   font-weight: 400;
@@ -2289,4 +1948,26 @@ transform: translate(-50px, -20px);
   .footer-social{
     justify-content: center;
   }
+}
+.footer-bottom {
+  font-size: 14px;
+  text-align: center;
+  padding: 12px 10px;
+}
+
+.design-by {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.design-by a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+.design-by a:hover {
+  text-decoration: underline;
 }
