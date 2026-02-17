@@ -70,7 +70,7 @@
       </li>
 
       <li>
-        <a href="About.html"class="active">About</a>
+        <a href="About.html"class="active">About us</a>
       </li>
 
       <!-- PRODUCTS DROPDOWN -->
@@ -82,13 +82,12 @@
           <!-- Product 1 Section -->
           <div class="mega-section">
             
-            <a href="Sliding-Door.html">Slidings Doors</a>
-            <a href="Hardware.html">Synchronised Doors</a>
+            <a href="Sliding-Door.html">Slidings & Synchronised Doors</a>
             <a href="Hardware.html">Glass Doors</a>
-            <a href="Hardware.html">Shower cubicals</a>
-            <a href="Hardware.html">Wardrobes</a>
-            <a href="Hardware.html">Kitchen shutters</a>
-            <a href="Hardware.html">Decorative Mirror</a>
+            <a href="shower.html">Shower cubicals</a>
+            <a href="wordrobes.html">Wardrobes</a>
+            <a href="Kitchen.html">Kitchen shutters</a>
+            <a href="Vanity-Mirror.html">Decorative Mirror</a>
           </div>
 
           <!-- Decorative Glass (Click to Open Nested) -->
@@ -130,65 +129,32 @@
 
 
 <!-- BANNER section start -->
-
 <section class="about-hero-xl">
 
+  <div class="hero-bg">
+    <img class="slide active" src="img-1/About/About-banar-n-1.jpg">
+    <img class="slide" src="img-1/About/About-banar-n-2.jpg">
+    <img class="slide" src="img-1/About/About-banar-n-3.jpg">
+  </div>
+
   <div class="xl-text">
-    <span class="xl-tag">ABOUT US</span>
-    <h1 class="xl-title">
-      SKV Glass & Interiors
-    </h1>
+   
+    <h1 class="xl-title">Transforming Glass Into <br>A Beautiful Masterpiece</h1>
     <p class="xl-desc">
-      The history of the company goes back into the year 2021, when SKTL came into being and it was primarily engaged in Furniture & Interior projects
+      
     </p>
   </div>
 
-<div class="xl-image">
-  <img class="slide active" src="img-1/About/Home-Banar-1.jpg">
-  <img class="slide" src="img-1/About/Home-Banar-2.jpg">
-  <img class="slide" src="img-1/About/Home-Banar-3.jpg">
-</div>
-
-
 </section>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
 
-  const hero = document.querySelector('.about-hero-xl');
-  const imageWrapper = document.querySelector('.xl-image');
+<script>
+
+ document.addEventListener("DOMContentLoaded", () => {
+
   const slides = Array.from(document.querySelectorAll('.slide'));
   let current = 0;
 
-  function clamp(val, min, max) {
-    return Math.min(Math.max(val, min), max);
-  }
-
-  /* ================= SCROLL ANIMATION ================= */
-  function onScroll() {
-    const rect = hero.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-
-    if (rect.top < windowHeight * 0.75) {
-      hero.classList.add('active');
-    }
-
-    if (rect.bottom > 0 && rect.top < windowHeight) {
-      const progress = clamp(
-        (windowHeight - rect.top) / windowHeight,
-        0,
-        1
-      );
-
-      imageWrapper.style.transform =
-        `scale(${1.25 - progress * 0.25}) translateY(${progress * 60}px)`;
-    }
-  }
-
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
-  /* ================= SLIDER (FADE ONLY – STABLE) ================= */
   slides.forEach((slide, i) => {
     slide.style.opacity = i === 0 ? "1" : "0";
     slide.classList.toggle("active", i === 0);
@@ -205,8 +171,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 4000);
 
 });
-</script>
 
+</script>
 
 <!-- BANNER section End -->
 
@@ -220,11 +186,21 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="about-row">
       <div class="about-text animate-left">
          
-        <h3>About Our company</h3>
-             <span class="about-subtitle">SKV Glass & Interiors</span>
+        <h3></h3>
+             
         <p>
-          The history of the company goes back into the year 2021, when SKTL came into being and it was primarily engaged in Furniture & Interior projects. Later, we expanded our horizons and got into the manufacturing of Decorative glass in the year 2024 & a new company was formed with the name of SKV Glass & interiors. We have a manufacturing unit, near IMT Manesar, Gurugram, equipped with all advanced machineries & equipments to produce high quality decorative glass. SKV glass is run by a team of professionals having industry experience of more than 15 years & deep insight about the products. 
-        </p>
+          <span class="about-subtitle">About us</span>
+          SKV Glass is led by a team of seasoned professionals with over 15 years of industry experience, supported
+by a skilled and dedicated workforce of 30+ craftsmen who transform creative concepts into refined
+masterpieces.
+
+<br><br>
+
+Our diverse product portfolio includes Sliding Doors, Synchronized Doors, Glass Doors, Shower Cubicles,
+Decorative Mirrors, Bathroom Vanity Mirrors, Kitchen Cabinets, Wardrobes, Mini Bar Shutters, and
+Workstation Screens. These are crafted using Fabric Laminated Glass, Tinted Glass, Wire Mesh Glass,
+Clear Glass, Marble Glass, Reeded Glass, and Lacquered Glass.
+
       </div>
 
       <div class="about-image animate-right">
@@ -239,11 +215,14 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <div class="about-text animate-right">
-        <span class="about-subtitle">Premium Design</span>
+       
         <p>
-          Our skilled & dedicated workforce of about 30 persons brings our imagination into a real masterpiece. We have in-house machineries comprising of Grinding machine, lamination, Paint Booth, Glass washing, Corner edge machine. Paint lab, Cutting, Milling, Punching, Drilling to manufacture, monitor and produce each & every product in a quality controlled environment.
-          
-          Our Product range encompasses Fabric Laminated Glass, Tinted Glass, Wire Mesh Glass, Clear Glass, Marble Glass, Reeded Glass & Laquered Glass. Today SKV Glass is the first choice of every interior designer and architect alike for their aesthetic value, versatility and longer life. 
+          <span class="about-subtitle">Vision</span>
+          To become a globally recognized brand in premium and niche decorative glass solutions, expanding
+           capacities and capabilities to serve the high-end luxury interior segment.<br><br><br>
+
+          <span class="about-subtitle">Mission</span>
+         To deliver high-quality decorative glass products that blend aesthetics, functionality, and durability while making affordable luxury accessible.. 
 
        
         </p>
@@ -266,12 +245,11 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="page-hero-overlay"></div>
 
   <div class="page-hero-content">
-    <h1>Premium Glass & Mirror Solutions</h1>
+    <h1>Premium Decorative Glass Solutions</h1>
     <p>
       Redefining modern architecture with precision-crafted glass,
       innovative designs, and professional expertise.
 
-        We operate a fully equipped manufacturing unit near IMT Manesar, Gurugram, featuring advanced machinery and modern infrastructure designed to deliver premium-quality decorative glass products. SKV Glass & Interiors is driven by a team of seasoned professionals with over 15 years of industry experience and in-depth product knowledge.
     </p>
   </div>
 
@@ -292,7 +270,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    <div class="image-grid-head">
     
-    <h2 class="grid-title">We Offer Services in These Categories</h2>
+    <h2 class="grid-title">Our product segments at a glance</h2>
     <p class="grid-desc">
       We manufacture and provide installation services primarily for all decorative glass segment, used for residential and commercial establishments..
     </p>
@@ -302,30 +280,30 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="image-grid">
 
     <div class="img-box">
-      <img src="img-1/About/product-4.jpg" alt="">
+      <img src="img-1/Sliding-Door-1.jpg" alt="">
       <div class="img-overlay">
-        <h3>Kitchen Shutters</h3>
+        <h3>Sliding Door</h3>
       </div>
     </div>
 
     <div class="img-box">
       <img src="img-1/About/product-5.jpg" alt="">
       <div class="img-overlay">
-        <h3>Wordrobes</h3>
+        <h3>Wardrobes</h3>
       </div>
     </div>
 
     <div class="img-box">
-      <img src="img-1/About/product-9.jpg" alt="">
+      <img src="img-1/product-12.jpg" alt="">
       <div class="img-overlay">
-        <h3>Workstation Screens</h3>
+        <h3>Decorative Mirrors</h3>
       </div>
     </div>
 
     <div class="img-box">
       <img src="img-1/carousel-2.jpg" alt="">
       <div class="img-overlay">
-        <h3>Bathroom Cabicles</h3>
+        <h3>Shower Cubicles</h3>
       </div>
     </div>
 
@@ -343,9 +321,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   <!-- SECTION HEADING -->
   <div class="services-header">
-    <h2>Advantages Of Laminated Safety Glass</h2>
+    <h2>Advantages Of Decorative Glass</h2>
     <p>
-      Fabric Laminated Glass offers versatile and stylish solutions for enhancing the interior spaces. These glass options not only contribute to aesthetic appeal but also offer practical benefits such as improved privacy, durability and ease of maintenance, making them a valuable edition to any interior design
+      Decorative Glass offers versatile and stylish solutions for enhancing the interior spaces. These glass options not only contribute to aesthetic appeal but also offer practical benefits such as improved privacy, durability and ease of maintenance, making them a valuable edition to any interior design
     </p>
   </div>
 
@@ -387,10 +365,10 @@ document.addEventListener("DOMContentLoaded", () => {
     <!-- RIGHT IMAGE -->
     <div class="services-right">
       <div class="image-wrapper">
-        <img src="img-1/About/product-6.jpg" class="service-image active">
-        <img src="img-1/About/Product-7.jpg" class="service-image">
-        <img src="img-1/About/Product-8.jpg" class="service-image">
-        <img src="All-product/training-4.jpg" class="service-image">
+        <img src="img-1/FabricLaminatedGlass_SKF-1.jpg" class="service-image active">
+        <img src="All-product/ReededGlass/BrownReeded.jpg" class="service-image">
+        <img src="All-product/wiremesh/WireMeshGlass_SKW 201.jpg" class="service-image">
+        <img src="All-product/TintedGlass/CloudyTinted.jpg" class="service-image">
       </div>
     </div>
 
