@@ -1791,9 +1791,7 @@ transform: translate(-50px, -20px);
 
 
 /* footer section start*/
-/* =========================
-   FOOTER BASE
-========================= */
+
 .site-footer{
   position: relative;
   background: url("../img-1/AboutHeader.jpg") center/cover no-repeat;
@@ -1850,6 +1848,17 @@ transform: translate(-50px, -20px);
   margin: 0;
   padding: 0;
 }
+/* Contact List Gap */
+.footer-contact li {
+  margin-bottom: 8px;   
+  line-height: 1.6;    
+}
+
+/* Last item ke baad extra gap na aaye */
+.footer-contact li:last-child {
+  margin-bottom: 0;
+}
+
 
 .footer-links li,
 .footer-contact li{
