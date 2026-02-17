@@ -59,6 +59,66 @@
   opacity: 0.9;
 }
 
+
+/* ============================= */
+/* Responsive : About Hero XL */
+/* ============================= */
+
+/* Tablets (max-width: 991px) */
+@media (max-width: 991px) {
+  .about-hero-xl {
+    height: 75vh;
+    margin-top: 10vh;
+  }
+
+  .xl-title {
+    font-size: 2.4rem;
+  }
+
+  .xl-desc {
+    font-size: 1rem;
+    max-width: 520px;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .about-hero-xl {
+    height: 65vh;
+    margin-top: 9vh;
+  }
+
+  .xl-text {
+    padding: 0 15px;
+  }
+
+  .xl-title {
+    font-size: 2rem;
+    margin: 10px 0;
+  }
+
+  .xl-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .about-hero-xl {
+    height: 50vh;
+    margin-top: 8vh;
+  }
+
+  .xl-title {
+    font-size: 1.4rem;
+  }
+
+  .xl-desc {
+    font-size: 0.9rem;
+  }
+}
+
 /* About banner section page end */
 
 
