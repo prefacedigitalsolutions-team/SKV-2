@@ -1980,3 +1980,26 @@ transform: translate(-50px, -20px);
 .design-by a:hover {
   text-decoration: underline;
 }
+/* ============================= */
+/* Footer Social Responsive Fix */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .footer-social {
+    justify-content: flex-start;   /* left se chipak jayega */
+    gap: 12px;                     /* icons ke beech controlled gap */
+    padding-left: 0;               /* extra left gap remove */
+    margin-left: 0;
+  }
+
+  .footer-social a {
+    margin-left: 0;                /* individual link ka gap bhi hataya */
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .footer-social {
+    gap: 10px;
+  }
+}
