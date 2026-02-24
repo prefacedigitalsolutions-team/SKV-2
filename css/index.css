@@ -185,7 +185,85 @@ body{
   overflow-x:hidden;
 }
 
+
+
+
+
 /* ================= TOP NAV ================= */
+/* ================= DEFAULT (Desktop) ================= */
+
+.social-icons {
+  display: flex;
+  margin-top: 3px;  
+  gap: 28px;       
+  align-items: center;
+}
+
+.social-icons a {
+  width: 38px;
+  height: 38px;
+  background: #e4b37c;    
+  color: #fff;             
+  font-size: 16px;           
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;      
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+  background: #e63946;     
+}
+
+
+/* ================= TABLET ================= */
+@media (max-width: 992px) {
+
+  .social-icons {
+    gap: 22px;
+  }
+
+  .social-icons a {
+    width: 38px;
+    height: 38px;
+    font-size: 15px;
+  }
+
+}
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .social-icons {
+    gap: 18px;
+  }
+
+  .social-icons a {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .social-icons {
+    gap: 22px;        
+    margin-top: 5px;
+  }
+
+  .social-icons a {
+    width: 44px !important;       
+    height: 44px;      
+    font-size: 18px !important;    
+  }
+}
+
 
 .top-nav{
   position:fixed;
@@ -1980,20 +2058,18 @@ transform: translate(-50px, -20px);
 .design-by a:hover {
   text-decoration: underline;
 }
-/* ============================= */
-/* Footer Social Responsive Fix */
-/* ============================= */
+
 
 @media (max-width: 768px) {
   .footer-social {
-    justify-content: flex-start;   /* left se chipak jayega */
-    gap: 12px;                     /* icons ke beech controlled gap */
-    padding-left: 0;               /* extra left gap remove */
+    justify-content: flex-start;   
+    gap: 12px;                   
+    padding-left: 0;              
     margin-left: 0;
   }
 
   .footer-social a {
-    margin-left: 0;                /* individual link ka gap bhi hataya */
+    margin-left: 0;                
   }
 }
 
