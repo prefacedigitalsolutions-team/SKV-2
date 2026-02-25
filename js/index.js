@@ -16,53 +16,55 @@ window.addEventListener("load", () => {
 
 // mouse hover animatio start
 
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
 
-  const lens = document.querySelector(".global-lens");
-  const zoom = document.querySelector(".zoom-layer");
+//   const lens = document.querySelector(".global-lens");
+//   const zoom = document.querySelector(".zoom-layer");
 
-  /* 👉 agar lens exist nahi karta (mobile) to JS band */
-  if (!lens || !zoom) return;
+//   /* 👉 agar lens exist nahi karta (mobile) to JS band */
+//   if (!lens || !zoom) return;
 
-  // actual mouse position
-  let mouseX = 0;
-  let mouseY = 0;
+//   // actual mouse position
+//   let mouseX = 0;
+//   let mouseY = 0;
 
-  // rendered lens position
-  let currentX = 0;
-  let currentY = 0;
+//   // rendered lens position
+//   let currentX = 0;
+//   let currentY = 0;
 
-  const ZOOM = 1.9;
-  const LERP = 0.10;
-  const SNAP = 0.0001;
+//   const ZOOM = 1.9;
+//   const LERP = 0.10;
+//   const SNAP = 0.0001;
 
-  zoom.style.backgroundImage = `url(${window.location.href})`;
+//   zoom.style.backgroundImage = `url(${window.location.href})`;
 
-  function animate() {
-    currentX += (mouseX - currentX) * LERP;
-    currentY += (mouseY - currentY) * LERP;
+//   function animate() {
+//     currentX += (mouseX - currentX) * LERP;
+//     currentY += (mouseY - currentY) * LERP;
 
-    if (Math.abs(mouseX - currentX) < SNAP) currentX = mouseX;
-    if (Math.abs(mouseY - currentY) < SNAP) currentY = mouseY;
+//     if (Math.abs(mouseX - currentX) < SNAP) currentX = mouseX;
+//     if (Math.abs(mouseY - currentY) < SNAP) currentY = mouseY;
 
-    lens.style.left = currentX + "px";
-    lens.style.top = currentY + "px";
+//     lens.style.left = currentX + "px";
+//     lens.style.top = currentY + "px";
 
-    zoom.style.backgroundPosition =
-      `${-currentX * ZOOM}px ${-currentY * ZOOM}px`;
+//     zoom.style.backgroundPosition =
+//       `${-currentX * ZOOM}px ${-currentY * ZOOM}px`;
 
-    requestAnimationFrame(animate);
-  }
+//     requestAnimationFrame(animate);
+//   }
 
-  document.addEventListener("mousemove", (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
+//   document.addEventListener("mousemove", (e) => {
+//     mouseX = e.clientX;
+//     mouseY = e.clientY;
+//   });
 
-  animate();
-});
+//   animate();
+// });
 
 // mouse hover animatio start
+
+
 
 // nav bar section start
 
@@ -133,6 +135,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+
+// active ke liye
 
 
 

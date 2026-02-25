@@ -1,5 +1,43 @@
 
-// banar section start
+// Banar final section start new 
+document.addEventListener("DOMContentLoaded", () => {
+
+  const curtain = document.querySelector(".single-curtain");
+  if (!curtain) return;
+
+  function runCurtain() {
+
+    curtain.style.transition = "none";
+    curtain.style.left = "-100%";
+    curtain.offsetHeight;
+
+    curtain.style.transition = "left 4.5s ease-in-out";
+    curtain.style.left = "0%";
+
+    setTimeout(() => {
+      curtain.style.left = "100%";
+    }, 5600);
+
+    setTimeout(() => {
+      curtain.style.transition = "none";
+      curtain.style.left = "-100%";
+    }, 10500);
+  }
+
+  runCurtain();
+  setInterval(runCurtain, 12000);
+
+});
+
+// banar new section End 
+
+
+
+
+
+
+
+
 // banner section start
 
 document.addEventListener("DOMContentLoaded", () => {

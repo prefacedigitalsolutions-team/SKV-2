@@ -1,5 +1,90 @@
 
 
+/* Banar new section start*/
+
+.single-banner{
+  position:relative;
+  height:100vh;
+  overflow:hidden;
+  margin-top:50px;
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* DARK OVERLAY */
+.single-banner::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.15);
+  z-index:1;
+}
+
+/* HEADING */
+.single-banner h1{
+  position:relative;
+  z-index:3;
+  color:#fff;
+  font-size:58px;
+  font-weight:700;
+  text-align:center;
+  text-shadow:
+    0 6px 18px rgba(0,0,0,0.5),
+    0 0 22px rgba(255,255,255,0.08);
+}
+
+/* CURTAIN */
+.single-curtain{
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  z-index:2;
+
+  background:linear-gradient(
+    120deg,
+    rgba(231,217,87,0.25)
+  );
+}
+
+/* SHINE */
+.single-shine{
+  position:absolute;
+  top:0;
+  right:-70px;
+  width:70px;
+  height:100%;
+
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.35),
+    transparent
+  );
+}
+
+/* MOBILE */
+@media (max-width:480px){
+  .single-banner{
+    height:50vh;
+  }
+  .single-banner h1{
+    font-size:30px;
+    padding:0 12px;
+  }
+}
+
+
+/* Banar new section End*/
+
+
+
 
  /* banar section start*/
 
