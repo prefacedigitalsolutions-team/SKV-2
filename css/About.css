@@ -170,7 +170,7 @@
   letter-spacing: 1px;
   margin-bottom: 1px;
   color: #0d1631;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .about-text p {

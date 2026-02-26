@@ -1,3 +1,53 @@
+/* ===== Large Screens (≥ 1600px) ===== */
+@media (min-width: 1600px){
+  .image-banner{
+    height: 85vh;
+    min-height: 700px;
+  }
+}
+
+/* ===== Desktop (≤ 1400px) ===== */
+@media (max-width: 1400px){
+  .image-banner{
+    height: 75vh;
+    min-height: 600px;
+  }
+}
+
+/* ===== Laptop / Small Desktop (≤ 1200px) ===== */
+@media (max-width: 1200px){
+  .image-banner{
+    height: 65vh;
+    min-height: 520px;
+  }
+}
+
+/* ===== Tablet (≤ 992px) ===== */
+@media (max-width: 992px){
+  .image-banner{
+    height: 55vh;
+    min-height: 450px;
+  }
+}
+
+/* ===== Mobile (≤ 768px) ===== */
+@media (max-width: 768px){
+  .image-banner{
+    height: 45vh;
+    min-height: 380px;
+  }
+}
+
+/* ===== Small Mobile (≤ 480px) ===== */
+@media (max-width: 480px){
+  .image-banner{
+    height: 35vh;
+    min-height: 300px;
+  }
+}
+
+
+
 .hardware-section {
   display: flex;
   justify-content: center;
@@ -64,7 +114,7 @@
 
   .hardware p {
     font-size: 18px;
-    max-width: 90%; /* screen width ke hisaab se adjust */
+    max-width: 90%; 
     padding: 6px 10px;
   }
 }
@@ -86,320 +136,201 @@
 /* Intro section End*/
 
 
+/* ================= Hardware Gallery ================= */
 
-
-/* Images section start*/
-
-
-.hardware-gallery-section {
-  padding: 4px 20px;
-  background: #b3b3b3;
+.hardware-gallery-section{
+  padding: 14px 20px;
+  background: #faf4bb;
 }
 
-.hardware-gallery {
+.hardware-gallery{
   display: flex;
   gap: 40px;
   align-items: flex-start;
 }
 
+/* ================= LEFT BIG IMAGE ================= */
 
-
-/* Left Big Image */
-.left-image {
+.left-image{
   position: relative;
   flex: 0 0 400px;
-  height: 1570px;
+  height: 1370px;
   border-radius: 8px;
   overflow: hidden;
 }
 
-/* Image */
-.left-image img {
+.left-image img{
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 8px;
 }
 
-/* Overlay – start from bottom */
-.left-overlay {
+/* Overlay */
+.left-overlay{
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
+  inset: 0;
   background: linear-gradient(
     to top,
     rgba(0,0,0,0.85),
     rgba(0,0,0,0.45),
     rgba(0,0,0,0)
   );
-
   display: flex;
   align-items: flex-end;
   padding: 30px;
-
   transform: translateY(100%);
   opacity: 0;
-
-  transition:
-    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 0.6s ease;
+  transition: transform 0.8s cubic-bezier(0.22,1,0.36,1),
+              opacity 0.6s ease;
 }
 
-/* Paragraph */
-.left-overlay p {
+.left-overlay p{
   color: #fff;
   font-size: 18px;
   line-height: 1.6;
-  margin: 0;
   max-width: 90%;
 }
 
-/* Hover – smooth slide up */
-.left-image:hover .left-overlay {
+.left-image:hover .left-overlay{
   transform: translateY(0);
   opacity: 1;
 }
 
+/* ================= RIGHT GRID ================= */
 
-
-
-/* Right Grid */
-.right-grid {
+.right-grid{
   flex: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
+
 /* Grid Item */
-.grid-item {
-  position: relative;
+.grid-item{
+  position: relative;          
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   overflow: hidden;
-  border-radius: 6px;
-  padding-bottom: 12px;
 }
 
-/* Grid Image */
-.grid-item img {
+/* Image */
+.grid-item img{
   width: 100%;
-  height: 270px;
-  object-fit: cover;
-  border-radius: 6px;
-  display: block;
-  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  height: 240px;
+  object-fit: contain;
+ 
+  transition: transform 0.8s cubic-bezier(0.22,1,0.36,1);
 }
 
-/* Zoom */
-.grid-item:hover img {
-  transform: scale(1.05);
+/* Smooth Zoom */
+.grid-item:hover img{
+  transform: scale(1.08);
 }
 
-/* SHINE LAYER (IMAGE HEIGHT ONLY) */
-.grid-item::after {
+/* Shine Effect */
+.grid-item::after{
   content: "";
   position: absolute;
   top: 0;
-  left: -120%;
-  width: 60%;
-  height: 260px;          /* 🔥 image ki exact height */
+  left: -140%;
+  width: 50%;
+  height: 280px;
   pointer-events: none;
-
   background: linear-gradient(
     120deg,
-    rgba(0,0,0,0) 20%,
-    rgba(0,255,255,0.45) 45%,
-    rgba(0,0,0,0.55) 50%,
-    rgba(0,255,255,0.45) 55%,
-    rgba(0,0,0,0) 80%
+    transparent 20%,
+    rgba(255, 179, 15, 0.55) 45%,
+    rgba(255,255,255,0.15) 50%,
+    rgba(255,255,255,0.55) 55%,
+    transparent 80%
   );
-
   transform: skewX(-20deg);
   opacity: 0;
 }
 
-/* Hover Shine */
-.grid-item:hover::after {
+.grid-item:hover::after{
   opacity: 1;
-  animation: gridShine 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+  animation: gridShine 1.2s cubic-bezier(0.22,1,0.36,1);
 }
 
-/* Animation */
-@keyframes gridShine {
-  0% {
-    left: -120%;
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  100% {
-    left: 120%;
-    opacity: 0;
-  }
+@keyframes gridShine{
+  0%{ left: -140%; opacity: 0; }
+  35%{ opacity: 1; }
+  100%{ left: 140%; opacity: 0; }
 }
 
-/* Image Name */
-.grid-item span {
-  display: block;
+/* Caption */
+.grid-item span{
   margin-top: 8px;
   font-size: 14px;
   font-weight: 500;
   color: #333;
+  text-align: center;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 1200px){
+  .left-image{ flex: 0 0 320px; height: 1100px; }
+  .grid-item img,
+  .grid-item::after{ height: 210px; }
+}
+
+/* Small Tablet */
+@media (max-width: 992px){
+  .hardware-gallery{ flex-direction: column; align-items: center; }
+  .left-image{ width: 100%; max-width: 600px; height: 720px; }
+  .grid-item img,
+  .grid-item::after{ height: 200px; }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .right-grid{ grid-template-columns: repeat(2, 1fr); }
+  .left-image{ height: 650px; }
+  .grid-item img,
+  .grid-item::after{ height: 180px; }
 }
 
 
 
-
-/* ====== Tablet (≤ 1200px) ====== */
-@media (max-width: 1200px) {
-  .hardware-gallery {
-    gap: 24px;
-  }
-
-  .left-image {
-    flex: 0 0 320px;
-    height: 1100px;
-  }
-
-  .right-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .grid-item img {
-    height: 220px;
-  }
-
-  .grid-item::after {
-    height: 220px;
-  }
+/* Ultra-Wide Screens */
+@media (min-width: 1800px){
+  .left-image{ flex: 0 0 500px; height: 2000px; }
+  .grid-item img,
+  .grid-item::after{ height: 360px; }
+  .grid-item span{ font-size: 18px; }
 }
 
-/* ====== Small Tablet (≤ 992px) ====== */
-@media (max-width: 992px) {
-  .hardware-gallery {
-    flex-direction: column;
-    align-items: center;
+
+
+/* ===== MOBILE ONLY (≤480px) ===== */
+
+@media (max-width: 480px){
+
+  /*  Badi (left) image hide */
+  .left-image{
+    display: none;
   }
 
-  .left-image {
-    width: 100%;
-    max-width: 600px;
-    height: 700px;
+  /* Gallery normal flow me */
+  .hardware-gallery{
+    display: block;
   }
 
-  .right-grid {
-    width: 100%;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .grid-item img {
-    height: 200px;
-  }
-
-  .grid-item::after {
-    height: 200px;
-  }
-}
-
-/* ====== Mobile (≤ 768px) ====== */
-@media (max-width: 768px) {
-  .hardware-gallery-section {
-    padding: 20px 12px;
-  }
-
-  .left-image {
-    height: 680px;
-  }
-
-  .left-overlay p {
-    font-size: 16px;
-  }
-
-  .right-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
-
-  .grid-item img {
-    height: 180px;
-  }
-
-  .grid-item::after {
-    height: 180px;
-  }
-}
-/* ====== Small Mobile (≤ 480px) ====== */
-@media (max-width: 480px) {
-  .left-image {
-    height: 80vh ;  /* viewport ke 70% height */
-    max-height: 1260px; /* upper limit */
-    width: 100%;
-  }
-
-  .right-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .grid-item img {
-    height: 400px; 
-  }
-
-  .grid-item::after {
-    height: 400px; 
-  }
-
-  .grid-item span {
-    font-size: 14px;
-    text-align: center;
-    margin-top: 12px;
-  }
-}
-
-@media screen and (min-width: 1400px) and (max-width: 2200px) {
-  .hardware-gallery {
-    flex-direction: row; 
-    gap: 50px;
-    align-items: flex-start;
-  }
-
-  /* Left Big Image */
-  .left-image {
-    flex: 0 0 500px;  
-    height: 239vh;    
-    border-radius: 2px;
-  }
-
-  .left-overlay {
-    padding: 40px;
-  }
-
-  .left-overlay p {
-    font-size: 50px;
-    line-height: 1.6;
-  }
-
-  /* Right Grid */
-  .right-grid {
-    flex: 1;
+  /*  Choti images – 2 per row */
+  .right-grid{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  /* Grid Items (Choti Images) */
-  .grid-item {
-    height: auto;  
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 12px;
+    width: 100%;
   }
 
   .grid-item img,
-  .grid-item::after {
-    height: 450px;
-    border-radius: 6px;
-  }
-
-  .grid-item span {
-    font-size: 20px;
+  .grid-item::after{
+    height: 200px;
   }
 }

@@ -492,6 +492,55 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Arro sewction start
 
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("scrollTopBtn");
+
+  if (!btn) return;
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  });
+
+  btn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+});
+
+
+
+// Active link section start 
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const navLinks = document.querySelectorAll(".nav-menu li a");
+  const currentPage = window.location.pathname.split("/").pop();
+
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute("href");
+
+    // index.html & home case
+    if (
+      (currentPage === "" || currentPage === "index.html") &&
+      linkPage === "index.html"
+    ) {
+      link.classList.add("active");
+    }
+
+    // normal pages
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+  });
+
+});
 
 

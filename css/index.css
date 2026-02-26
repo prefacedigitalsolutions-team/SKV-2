@@ -497,6 +497,31 @@ body{
   transition:0.25s ease;
 }
 
+
+
+/* Active link section strat */
+
+.top-nav .nav-menu li a.active{
+  color: #fc9929;
+  font-weight: 600;
+  position: relative;
+}
+
+.top-nav .nav-menu li a.active::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+ 
+}
+
+/* Active link section End */
+
+
+
+
 /* ===== DESKTOP HOVER OPEN ===== */
 @media (min-width:992px){
   .toggle-section:hover > .toggle-content{
@@ -1964,6 +1989,78 @@ transform: translate(-50px, -20px);
 
 
 
+/* page up section start*/
+
+.scroll-3d{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;   
+  border: none;
+
+  /* Professional gradient */
+  background: linear-gradient(
+    135deg,
+    #052d64, 
+    #374151    
+  );
+
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 500;
+  cursor: pointer;
+  display: none;
+
+  /* Soft modern shadow (NOT 3D) */
+  box-shadow:
+    0 8px 18px rgba(0,0,0,0.25);
+
+  transition: all 0.25s ease;
+  z-index: 999;
+}
+
+.scroll-3d span{
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+/* ===== HOVER (SUBTLE, CLEAN) ===== */
+.scroll-3d:hover{
+  background: linear-gradient(
+    135deg,
+    #111827,
+    #1f2937
+  );
+  box-shadow:
+    0 10px 22px rgba(0,0,0,0.35);
+}
+
+.scroll-3d:hover span{
+  transform: translateY(-2px);
+}
+
+/* ===== ACTIVE (CLICK FEEDBACK) ===== */
+.scroll-3d:active{
+  transform: scale(0.95);
+}
+
+/* ===== OPTIONAL SOFT GLOW RING ===== */
+.scroll-3d::after{
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.08);
+  pointer-events: none;
+}
+
+/* page up section End*/
+
+
+
+
 
 /* footer section start*/
 
@@ -1994,7 +2091,7 @@ transform: translate(-50px, -20px);
   padding: 80px 20px 40px;
 
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
 
